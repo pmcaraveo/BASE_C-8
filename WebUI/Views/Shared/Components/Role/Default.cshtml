@@ -1,0 +1,4 @@
+﻿@model IEnumerable<TSJ.Domain.ViewUserRol>
+
+
+<strong>PERFIL: </strong> @string.Join(" / ", Model.ToList().Select(x => x.Rol))

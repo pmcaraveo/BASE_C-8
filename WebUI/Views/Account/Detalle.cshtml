@@ -1,0 +1,75 @@
+﻿@model TDJ.WebUI.ViewModels.UsuarioVM
+
+@{
+    ViewData["Title"] = "Detalle";
+}
+
+<form asp-action="Detalle">
+    <div class="container card">
+        <div class="card-header">
+            <div class="btn-group-sm float-left" role="group">
+                <a asp-action="Index" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Regresar</a>
+            </div>
+            <h4 class="text-center">Detalles del usuario</h4>
+        </div>
+        <div class="row">
+            <div class="col card-body">
+                <div class="form-group" hidden>
+                    <input asp-for="Id" class="form-control" hidden />
+                </div>
+                <p><strong>Nombre de usuario:</strong> @Model.UserName </p>
+
+                <p><strong>Nombre completo:</strong> @Model.NombreCompleto </p>
+
+                @if (Model.Email != null)
+                {
+                    <p><strong>Correo institucional:</strong> @Model.Email </p>
+                }
+
+                @if (Model.Activo  == true)
+                {
+                    <p><strong>Activo? </strong> SI</p>
+                }
+                else
+                {
+                    <p><strong>Activo? </strong> NO</p>
+                }
+
+            </div>
+        </div>
+        <div class="btn-group-sm text-right card-footer" role="group">
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary"><i class="fas fa-pencil-alt"></i> Editar</a>
+        </div>
+    </div>
+</form>
+<hr />
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-header"><h4 class="text-center">Juzgados para captura de expedientes</h4></div>
+            <div class="all-info-container card-body">
+                <input type="hidden" id="idUsuarioArea" value="@Model.Id" />
+                <div class="btn-group-sm" role="group">
+                    <a asp-action="Create" asp-route-id="@Model.Id" asp-controller="UserArea" class="btn btn-primary"><i class="fas fa-list-alt"></i> Agregar Juzgado</a>
+                </div>
+                <div id="dtArea"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-header"><h4 class="text-center">Distritos para transferencias y cajas</h4></div>
+            <div class="all-info-container card-body">
+                <input type="hidden" id="idUsuarioDistrito" value="@Model.Id" />
+                <div class="btn-group-sm" role="group">
+                    <a asp-action="Create" asp-route-id="@Model.Id" asp-controller="UserDistritoJudicial" class="btn btn-primary"><i class="fas fa-city"></i> Agregar distrito judicial</a>
+                </div>
+                <div id="dtDistrito"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_Scripts" />
+}

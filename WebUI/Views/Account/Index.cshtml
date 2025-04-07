@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Usuarios";
+}
+<div class="card card-accent-dark">
+    <div class="card-header" role="group">
+        <a asp-area="Identity" asp-page="/Account/Register" class="btn btn-primary"><i class="fas fa-plus"></i> Nuevo</a>
+    </div>
+    <div class="card-body">
+        @{
+            var vm = Model;
+        }
+
+        <div class="table-responsive">
+            <partial name="_MyDataTable" model="vm" />
+            <partial name="_MyDataTableScript" />
+        </div>
+    </div>
+</div>

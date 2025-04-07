@@ -1,0 +1,118 @@
+﻿<script> 
+    $(function () {
+        //Configuracion idioma fechas
+        moment.locale('es-mx');
+
+        //Para el click dentro del submenu del usuario
+        $('.dropdown-menu').on('click', function (e) {
+            e.stopPropagation();
+        });
+
+        //Datetime para formularios
+        if ($.fn.datetimepicker) {
+            $('.datetimepicker').datetimepicker({
+                i18n: {
+                    de: {
+                        months: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                        dayOfWeek: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+                    }
+                },
+                format: 'd/m/Y H:i',
+            });
+            try {
+                $.validator.addMethod('date',
+                    function (value, element) {
+                        if (this.optional(element)) {
+                            return true;
+                        }
+                        var ok = true;
+
+                        if (element.attributes.format) {
+                            var format = element.attributes.format.value;
+                            try {
+                                ok = moment(value, format, true).isValid();
+                            }catch(err) {
+                                ok = false;
+                            }
+                        }
+                        return ok;
+                    });
+            } catch (e) { }
+        }
+        $.datetimepicker.setLocale('es');
+
+        //Configuración para fechas del filtro Urle★ Actionl datatable
+        $(document).on('focus', '.date_range_filter, .datepicker', function () {
+            $(this).attr('autocomplete', 'off');
+        });
+
+        if ($.fn.datepicker) {
+            $('.datepicker').datepicker();
+            try {
+                $.validator.addMethod('date',
+                    function (value, element) {
+                        if (this.optional(element)) {
+                            return true;
+                        }
+                        var ok = true;
+
+                        if (element.attributes.format) {
+                            var format = element.attributes.format.value;
+                            try {
+                                ok = moment(value, format, true).isValid();
+                            } catch (err) {
+                                ok = false;
+                            }
+                        }
+                        return ok;
+                    });
+            } catch (e) { }
+        }
+
+        $.datepicker.regional['es'] = {
+            closeText: 'Cerrar',
+            prevText: '< Ant',
+            nextText: 'Sig >',
+            currentText: 'Hoy',
+            monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+            monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+            dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+            dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Juv', 'Vie', 'Sáb'],
+            dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'],
+            weekHeader: 'Sm',
+            dateFormat: 'dd/mm/yy',
+            firstDay: 1,
+            isRTL: false,
+            showMonthAfterYear: false,
+            yearSuffix: ''
+        };
+        $.datepicker.setDefaults($.datepicker.regional['es']);
+
+        //Autoclose the alert
+        window.setTimeout(function () {
+            $(".alert-tsjqroo").fadeTo(1000, 0).slideUp(1000, function () {
+                $(this).remove();
+            });
+        }, 5000);
+    });
+
+    function subMenu(id) {
+            //Se guarda el id en session
+        sessionStorage.setItem('submenu', id);
+        $.get('@Url.Action("GetSubMenu", "Account")/?menuId=' + id, function (content) {
+            $('#subMenu').html(content);
+        });
+    }
+
+    function treeMenu(id) {
+        $.get('@Url.Action("GetTreeMenu", "Account")/?menuId=' + id, function(content){
+            $('#treeMenu').html(content);
+        });
+    }
+
+    //Sobrecarga de la función subMenu
+    $(function () {
+        var menuId = sessionStorage.getItem('submenu');
+        subMenu(menuId);
+    });    
+</script>

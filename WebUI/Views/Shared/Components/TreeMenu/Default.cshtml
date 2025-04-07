@@ -1,0 +1,13 @@
+﻿@model IEnumerable<TSJ.Domain.ViewMenuRol>
+
+@foreach (var item in Model)
+{
+    if (item.Accion != null && item.Controlador != null && item.PadreId != null)
+    {
+        <li class="c-sidebar-nav-item">
+            <a class="c-sidebar-nav-link" asp-action="@item.Accion" asp-controller="@item.Controlador">
+                <span class="c-sidebar-nav-icon"></span> @item.Nombre
+            </a>
+        </li>
+    }
+}

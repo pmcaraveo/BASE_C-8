@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Usuarios";
+}
+@if (ViewBag.SubMenu != null)
+{
+    @foreach (var item in ViewBag.SubMenu)
+    {
+        <li class="c-sidebar-nav-item c-sidebar-nav-dropdown">
+            <a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle c-active" onclick="treeMenu(@item.MenuId)">
+                <i class="@item.Icon"></i> &nbsp;@item.Nombre
+            </a>
+            <ul class="c-sidebar-nav-dropdown-items" id="treeMenu">
+            </ul>
+        </li>
+    }
+}

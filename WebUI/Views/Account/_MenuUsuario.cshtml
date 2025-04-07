@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "Usuarios";
+}
+@foreach (var item in ViewBag.Menu)
+{
+    <li class="c-header-nav-item px-3">
+        <a class="c-header-nav-link" onclick="subMenu(@item.MenuId)">
+            @item.Nombre
+        </a>
+    </li>
+}
+
+@*asp-action="GetSubMenu" asp-route-menuId="@item.MenuId"*@
+
+@*onclick="subMenu(@item.MenuId)"*@

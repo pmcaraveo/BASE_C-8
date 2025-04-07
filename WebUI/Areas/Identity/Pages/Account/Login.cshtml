@@ -1,0 +1,105 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Iniciar sesión";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" href="~/theme/style.css" />
+</head>
+<body class="c-app flex-row align-items-center" style="background-image: url('@Url.Content("~/img/fp.jpg")'); background-repeat: no-repeat; background-position:center; background-size:cover;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card-group">
+                    <div class="card p-4">
+                        <div class="card-body">
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                            <partial name="_Alerts" />
+                            <form id="account" method="post">
+                                <h1>Identifícate</h1>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-user"></i>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" asp-for="Input.UserName" placeholder="Usuario">
+                                </div>
+                                <div class="input-group mb-4">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-key"></i>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" asp-for="Input.Password" placeholder="Contraseña">
+                                    <div class="input-group-append" style="background-color: #FFF !important;">
+                                        <div class="input-group-text" title="Mostrar contraseña" onclick="mostrarPassword()">
+                                            <span class="fas fa-eye-slash icon"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <button class="btn btn-primary px-4" type="submit">Ingresar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card text-white bg-gradient-dark py-5 d-md-down-none" style="width:44%">
+                        <div class="card-body text-center">
+                            <div class="text-white" style="font-family:Georgia; text-align:center;">
+                                <img src="~/img/Logo_TSJ.png" />
+                                <br />
+                                <h1>TÍTULO SISTEMA</h1>
+                                <h4>SUBTÍTULO SISTEMA</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CoreUI and necessary plugins-->
+    <script src="~/theme/coreui.bundle.min.js"></script>
+</body>
+</html>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script>
+    function closeSession(id) {
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("Close", "Account")',
+            data: 'id=' + id,
+            success: function (datos) {
+                alert('Sesión cerrada. Puede iniciar nueva sesión.')
+                location.reload();
+            }//Fin success
+        });//Fin ajax
+    }
+
+    function mostrarPassword() {
+        var cambio = document.getElementById("Input_Password");
+        if (cambio.type == "password") {
+            cambio.type = "text";
+            $('.icon').removeClass('fas fa-eye-slash').addClass('fas fa-eye');
+        } else {
+            cambio.type = "password";
+            $('.icon').removeClass('fas fa-eye').addClass('fas fa-eye-slash');
+        }
+    }
+</script>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

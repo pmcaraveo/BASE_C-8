@@ -1,0 +1,24 @@
+﻿@model IEnumerable<TSJ.Domain.ViewMenuRol>
+
+@if (Model != null)
+{
+    @foreach (var item in Model)
+    {
+        <li class="c-sidebar-nav-item c-sidebar-nav-dropdown">
+            @if (item.Accion == null && item.Controlador == null && item.PadreId != null)
+            {
+                <a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle c-active" onclick="treeMenu(@item.MenuId)">
+                    <i class="@item.Icon c-sidebar-nav-icon"></i>@item.Nombre
+                </a>
+                <ul class="c-sidebar-nav-dropdown-items" id="treeMenu_@item.MenuId">
+                </ul>
+            }
+            else
+            {
+                <a class="c-sidebar-nav-link c-active" asp-action="@item.Accion" asp-controller="@item.Controlador">
+                    <i class="@item.Icon c-sidebar-nav-icon"></i>@item.Nombre
+                </a>
+            }
+        </li>
+    }
+}

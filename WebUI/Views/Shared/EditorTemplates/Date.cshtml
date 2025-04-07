@@ -1,0 +1,11 @@
+﻿@{
+        var attributes = new Dictionary<string, object>();
+        attributes.Add("class", "form-control datepicker");
+        attributes.Add("type", "datetime");
+    }
+    <div class="input-group" id="@(ViewData.TemplateInfo.HtmlFieldPrefix)-datepicker">
+        @Html.TextBox("", ViewData.TemplateInfo.FormattedModelValue, attributes)
+        <span class="input-group-addon">
+            <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+    </div>

@@ -1,0 +1,413 @@
+﻿/* Switch 1 Specific Styles Start */
+input[type="checkbox"].switch {
+    font-size: 12px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 2.5em;
+    height: 1.5em;
+    background: #ddd;
+    border-radius: 3em;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    /*border: 1px solid #009688;*/
+}
+
+    input[type="checkbox"].switch:focus {
+        box-shadow: #0275d8;
+    }
+
+    input[type="checkbox"].switch:checked {
+        background: #0275d8;
+    }
+
+    input[type="checkbox"].switch:after {
+        position: absolute;
+        content: "";
+        width: 1.5em;
+        height: 1.5em;
+        border-radius: 50%;
+        background: #fff;
+        -webkit-box-shadow: 0 0 .25em rgba(0,0,0,.3);
+        box-shadow: 0 0 .25em rgba(0,0,0,.3);
+        -webkit-transform: scale(.7);
+        transform: scale(.7);
+        left: 0;
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+    }
+
+    input[type="checkbox"].switch:checked:after {
+        left: calc(100% - 1.5em);
+    }
+
+    input[type="checkbox"].switch.display {
+        cursor: default;
+    }
+/* Switch 1 Specific Style End */
+
+
+
+/* 
+    Estilos para los botones del DataTable y tablas 
+
+*/
+.icon::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.excel::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f1c3";
+    background-color: green;
+}
+
+
+.buttons-excel::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f1c3";
+}
+
+.buttons-excel {
+    background: none !important;
+    border: none !important;
+    font-size: 0;
+    background-color: green !important;
+    color: white !important;
+}
+
+.buttons-csv::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f6dd";
+}
+
+.buttons-csv {
+    background: transparent;
+    border: none !important;
+    font-size: 0;
+    display: none !important;
+}
+
+.buttons-pdf::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f1c1";
+}
+
+.buttons-pdf {
+    background: none !important;
+    border: none !important;
+    font-size: 0;
+    background-color: darkred !important;
+    color: white !important;
+    display: none !important;
+}
+
+.buttons-print::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f02f";
+}
+
+.buttons-print {
+    background: none !important;
+    border: none !important;
+    font-size: 0;
+    background-color: darkgray !important;
+    color: white !important;
+    display: none !important;
+}
+
+.buttons-copy::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0c5";
+}
+
+.buttons-copy {
+    background: transparent;
+    border: none !important;
+    font-size: 0;
+    display: none !important;
+}
+
+
+/*Hover table con buttons tools datatable*/
+.tools {
+    display: none;
+}
+
+.tbl:hover {
+    background: #d0d0d0;
+}
+
+.icon:hover{
+    color: white !important;
+}
+
+tbody tr:hover td div.tools {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%) translateY(70%);
+}
+
+tbody tr:hover {
+    background: #d0d0d0 !important;
+    border: 2px solid #d0d0d0;
+    box-shadow: 0 0 0 2px #d0d0d0;
+}
+
+/*Estilo para el input type file*/
+.custom-file-label:after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0c6";
+}
+
+/*Tamaño de input para mostrar el despliegue*/
+div.dataTables_wrapper div.dataTables_length select{
+    width: 50px !important;
+}
+
+/*Estilo para los chekbox, que seleccionarán todos*/
+/*#checkAll {
+    position: absolute;
+    transform: translateX(-165%) translateY(800%);
+    z-index: 3;
+}
+
+#checkAll2 {
+    position: absolute;
+    transform: translateX(20%) translateY(780%);
+    z-index: 4;
+}
+
+#checkAll3 {
+    position: absolute;
+    transform: translateX(20%) translateY(550%);
+    z-index: 5;
+}
+
+#checkAll4 {
+    position: absolute;
+    transform: translateX(-140%) translateY(800%);
+    z-index: 6;
+}
+*/
+
+/*Ocultar la barra horizontal del modal de jquery confirm*/
+.jconfirm .jconfirm-box div.jconfirm-content-pane .jconfirm-content{
+    overflow: hidden !important;
+}
+
+
+.dot {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    
+}
+
+    .dot > h5 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        font-size: 1.6rem;
+        font-weight: bold !important;
+        text-align:center;
+    }
+
+
+#renderRange{
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Colores para los row del datatable */
+.colorBack {
+    background-color: #ce8383 !important;
+}
+
+.colorPendiente {
+    background-color: #75c0e0 !important;
+}
+
+.colorValidar{
+    background-color: #e8e973 !important;
+}
+
+.colorAutorizar {
+    background-color: #ddd !important;
+}
+
+.colorCorreccion {
+    background-color: #ED765D !important;
+}
+
+.devuelto {
+    color: #ce8383 !important;
+}
+
+.pendiente{
+    color: #75c0e0 !important;
+}
+
+.validar {
+    color: #e8e973 !important;
+}
+
+.corregir {
+    color: #ED765D !important;
+}
+
+/*.fa-square-full {
+    color: #ce8383 !important;
+}*/
+
+/*Scroll div tabla jquery confirm*/
+.tblScroll {
+    height: 200px;
+    border: 1px solid;
+    overflow-y: auto !important;
+    overflow: hidden;
+}
+
+    .tblScroll::-webkit-scrollbar {
+        width: 8px; /* Tamaño del scroll en vertical */
+        height: 8px; /* Tamaño del scroll en horizontal */
+        display: none; /* Ocultar scroll */
+    }
+
+/*Strong*/
+strong{
+    font-weight: bold !important;
+}
+
+/*#timeLineExpediente {*/
+   /* height: 600px;*/
+    /*overflow-y: auto !important;
+    overflow: hidden;
+}
+
+    #timeLineExpediente::-webkit-scrollbar {
+        width: 8px;*/ /* Tamaño del scroll en vertical */
+        /*height: 8px;*/ /* Tamaño del scroll en horizontal */
+        /*display: none;*/ /* Ocultar scroll */
+    /*}*/
+
+.tblExpedienteNombres {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    .tblExpedienteNombres td, .tblExpedienteNombres th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    .tblExpedienteNombres tr:hover {
+        background-color: #ddd;
+    }
+
+    .tblExpedienteNombres th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #3c4b64;
+        color: white;
+    }
+
+/*Borde de Pills*/
+.nav-item {
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+}
+
+/* Style to Rotativa */
+.thead-rotativa {
+    background-color: #75c0e0 !important;
+    -webkit-print-color-adjust: exact !important;
+}
+
+
+/*Scroll para el div de la tabla de ubicaciones*/
+.tblUbicacion {
+    height: 440px;
+    overflow-y: auto !important;
+    overflow: hidden;
+}
+
+    .tblUbicacion::-webkit-scrollbar {
+        width: 8px; /* Tamaño del scroll en vertical */
+        height: 8px; /* Tamaño del scroll en horizontal */
+        display: none; /* Ocultar scroll */
+    }
+
+
+.colorInfo {
+    background-color: #D6EAF8 !important;
+}
+
+.colorSuccess {
+    background-color: #85D894 !important;
+}
+
+.colorDanger {
+    background-color: #F5917F !important;
+}
+
+/*Cambiar color texto seleccionado*/
+::-moz-selection { /* Code for Firefox */
+    color: white !important;
+    background: #3c4b64 !important;
+}
+
+::selection {
+    color: white !important;
+    background: #3c4b64 !important;
+}
+
+/*INCIDENTES*/
+.tblInci {
+    width: 100%;
+    color: #212529;
+}
+
+.tblInci, th, td {
+    padding: 7px;
+}
+
+.tblScroll2 {
+    height: 115px;
+    border: 1px solid;
+    overflow-y: auto !important;
+    overflow: hidden;
+    font-size: 75%;
+}
+/*INCIDENTES*/
+
+/*Para mobile*/
+/*@media (max-width: 960px) {
+    .d-md-down-none {
+        display: block !important;
+    }
+
+    .c-header-nav {
+        display: flex !important;
+        align-items: center !important;
+    }
+}*/

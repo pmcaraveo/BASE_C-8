@@ -1,0 +1,26 @@
+﻿@model IEnumerable<TSJ.Domain.ViewMenuRol>
+
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+        if (item.Controlador == null && item.Accion == null && item.PadreId == null)
+        {
+            <li class="c-header-nav-item px-3">
+                <a class="c-header-nav-link btn-group-vertical" onclick="subMenu(@item.Id)" style="cursor:pointer;">
+                    <i class="@item.Icon" title="@item.Title" style="color:#3c4b64; width:25px; height:25px;"></i>
+                    @item.Nombre
+                </a>
+            </li>
+        }
+        if (item.Controlador != null && item.Accion != null && item.PadreId == null && item.Orden == 0)
+        {
+            <li class="c-header-nav-item px-3">
+                <a class="c-header-nav-link btn-group-vertical" asp-action="@item.Accion" asp-controller="@item.Controlador">
+                    <i class="@item.Icon" title="@item.Title" style="color:#3c4b64; width:25px; height:25px;"></i>
+                    @item.Nombre
+                </a>
+            </li>
+        }
+    }
+}

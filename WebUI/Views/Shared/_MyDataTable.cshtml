@@ -1,0 +1,42 @@
+﻿@using System.Linq
+@using Mvc.JQuery.DataTables
+@using Newtonsoft.Json
+@using Mvc.JQuery.DataTables.Models;
+@using Newtonsoft.Json.Linq
+@using Mvc.JQuery.DataTables.Serialization;
+@model DataTableConfigVm
+
+<table id="@Model.Id" class="display @(Model.TableClass ?? DataTableConfigVm.DefaultTableClass ?? "")" @Html.Raw(Model.FixedLayout ? "style='table-layout:fixed'" : "")>
+    <thead>
+        @if (Model.UseColumnFilterPlugin)
+        {
+        <tr>
+            @foreach (var column in Model.Columns)
+            {
+                if (column.Searchable == false)
+                {
+                    <th></th>
+                }
+                else
+                {
+                    <th>@column.DisplayName</th>
+                }
+            }
+        </tr>
+        }
+        @if (!Model.HideHeaders)
+        {
+            <tr>
+                @foreach (var column in Model.Columns)
+                {
+                    <th class="@column.CssClassHeader text-center" style="background-color: #3c4b64; color:white;">@column.DisplayName</th>
+                }
+            </tr>
+        }
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="@Model.Columns.Count()" class="dataTables_empty">Cargando datos...</td>
+        </tr>
+    </tbody>
+</table>

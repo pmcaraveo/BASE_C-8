@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Usuarios";
+}
+@foreach (var item in ViewBag.TreeMenu)
+{
+
+    <li class="c-sidebar-nav-item">
+        <a class="c-sidebar-nav-link" asp-action="@item.Accion" asp-controller="@item.Controlador">
+            <span class="c-sidebar-nav-icon"></span> @item.Nombre
+        </a>
+    </li>
+}

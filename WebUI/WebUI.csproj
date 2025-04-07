@@ -1,0 +1,128 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <Compile Remove="Connected Services\**" />
+    <Compile Remove="Data\**" />
+    <Compile Remove="TDJ\**" />
+    <Content Remove="Connected Services\**" />
+    <Content Remove="Data\**" />
+    <Content Remove="TDJ\**" />
+    <EmbeddedResource Remove="Connected Services\**" />
+    <EmbeddedResource Remove="Data\**" />
+    <EmbeddedResource Remove="TDJ\**" />
+    <None Remove="Connected Services\**" />
+    <None Remove="Data\**" />
+    <None Remove="TDJ\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="ViewComponents\AreaViewComponent.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\jquery-ui-timepicker-addon.css" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\jquery-ui-timepicker-addon.js" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\css\demo_page.css" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\css\demo_table.css" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\css\demo_table_jui.css" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\css\demo_validation.css" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\css\jquery.multiselect.css" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\css\site_jui.ccss.css" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\css\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\css\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\css\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\css\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\css\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\css\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\css\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\css\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\css\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\css\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\css\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\css\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\css\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\css\themes\base\jquery-ui.css" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\images\back_disabled.jpg" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\images\back_disabled.png" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\images\back_enabled.jpg" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\images\back_enabled.png" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\images\DataTables.jpg" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\images\favicon.ico" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\images\forward_disabled.jpg" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\images\forward_disabled.png" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\images\forward_enabled.jpg" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\images\forward_enabled.png" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\images\sort_asc.png" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\images\sort_asc_disabled.png" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\images\sort_both.png" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\images\sort_desc.png" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\images\sort_desc_disabled.png" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\images\unchecked.gif" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\js\jquery.dataTables.columnFilter.css" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\js\jquery.dataTables.columnFilter.js" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Content\jquery-datatables-column-filter\media\js\jquery.multiselect.js" />
+    <Content Remove="C:\Users\atello\.nuget\packages\mvc.jquery.datatables.templates\1.5.56\contentFiles\any\netstandard1.6\Views\Shared\DataTable.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="CoreHtmlToImage" Version="1.0.6" />
+    <PackageReference Include="DocXToPdfConverter" Version="1.0.5" />
+    <PackageReference Include="EFCore.NamingConventions" Version="8.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.14" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.3.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.14" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.14">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.14">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+    <PackageReference Include="Mvc.JQuery.DataTables.AspNetCore" Version="1.5.56" />
+    <PackageReference Include="Mvc.JQuery.Datatables.Templates" Version="1.5.56" />
+    <PackageReference Include="NetCore.AutoRegisterDi" Version="2.2.1" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.11" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.Design" Version="1.1.0" />
+    <PackageReference Include="QueryInterceptor.Core" Version="1.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TSJ.Application\TSJ.Application.csproj" />
+    <ProjectReference Include="..\TSJ.Infraestructure\TSJ.Infraestructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Shared\Components\Role\Default.cshtml" />
+    <None Include="wwwroot\lib\dropdown\css\.DS_Store" />
+    <None Include="wwwroot\lib\dropdown\js\.DS_Store" />
+    <None Include="wwwroot\lib\dropdown\js\modernizr.custom.79639.js" />
+    <None Include="wwwroot\lib\fancybox\jquery.fancybox.min.js" />
+    <None Include="wwwroot\lib\treegrid\js\jquery.treegrid.js" />
+    <None Include="wwwroot\lib\treegrid\js\jquery.treegrid.min.js" />
+    <None Include="wwwroot\lib\tui-calendar\app.js" />
+    <None Include="wwwroot\lib\tui-calendar\calendars.js" />
+    <None Include="wwwroot\lib\tui-calendar\default.js" />
+    <None Include="wwwroot\lib\tui-calendar\schedules.js" />
+    <None Include="wwwroot\lib\tui-calendar\tui-calendar.js" />
+    <None Include="wwwroot\lib\tui-calendar\tui-code-snippet.min.js" />
+    <None Include="wwwroot\lib\tui-calendar\tui-date-picker.min.js" />
+    <None Include="wwwroot\lib\tui-calendar\tui-time-picker.min.js" />
+    <None Include="wwwroot\lib\waitme\waitMe.js" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>
